@@ -22,20 +22,28 @@ def convImgToNpArrays(array):
         numpyimg.append(np.asarray(imgs[i]))
     return numpyimg
 
+# checking each photo with eacho
+def cloneFind(npimgs):
+    cloneImgArray = []
+    for imgIndex1 in range(len(npimgs)):
+        for imgIndex2 in range(len(npimgs)):
+            if npimgs[imgIndex1].all() == npimgs[imgIndex2].all() and imgIndex1 != imgIndex2:
 
+                cloneImgArray.append(imgs[imgIndex1].filename)
+                cloneImgArray.append(imgs[imgIndex2].filename)
+
+    #this return statement is funny lol XD
+    return list(set(cloneImgArray))
+
+#path specified will change later
 path = ".//images/"
 
-# your images in an array
+# images in an regular array
 imgs = loadImages(path)
 
+# change images to an np array
+npimgs = convImgToNpArrays(imgs)
 
+print(cloneFind(npimgs))
 
-
-        
-
-'''for imgIndex1 in range(len(imgs)):
-    for imgIndex2 in range(len(imgs)):
-        if imgs[imgIndex1].getdata == imgs[imgIndex2].getdata:
-            print(2)
-        if imgs[imgIndex1].getdata == imgs[imgIndex2].getdata and imgIndex1 != imgIndex2:
-            print(1)'''
+            
