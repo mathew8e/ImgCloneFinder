@@ -11,8 +11,12 @@ def loadImages(path):
     print("Started img loading")
     imagesList = listdir(path)
     loadedImages = []
-    for image in imagesList:
-        img = Image.open(path + image)
+    for image in range(len(imagesList)):
+        try:
+            img = Image.open(path + imagesList[image])
+        except PermissionError:
+            print(" FILE: " + imagesList[image].replace(path,'')+" can't be opened it is proboaly a folder so it cant open it")
+            quit()
         loadedImages.append(img)
     print("Finished img loading")
     return loadedImages
@@ -76,11 +80,11 @@ def deleteCloneImages(dictOfCloneImages):
 
 
 
-'''INSERT PATH HERE TO FOLDER'''
+'''INSERT PATH HERE TO IMG FOLDER'''
 
 #-----------------------------------------------------------------------------------------------------------------------------------------
 
-winpath = r"C:\Users\mathe\Downloads\Images for the website October 9-20211011T180149Z-001\Images for the website October 9\Sculptures"
+winpath = r".//images"
 
 #-----------------------------------------------------------------------------------------------------------------------------------------
 
