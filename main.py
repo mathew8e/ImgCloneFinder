@@ -47,12 +47,7 @@ def cloneFind(npimgs):
 
                 # just some debugging
                 print("Found ",img1," with ",img2)
-
-                #cloneImgArray.append(imgs[imgIndex1].filename.replace(path, ''))
-                #cloneImgArray.append(imgs[imgIndex2].filename.replace(path, ''))
                 
-                #create a array pair
-                #pairArray = [imgs[imgIndex1].filename.replace(path,''),imgs[imgIndex2].filename.replace(path,'')]
                 
                 if img1 in pairArray.keys() :
                     print(pairArray[img1])
@@ -60,7 +55,7 @@ def cloneFind(npimgs):
                 elif not any([True for k,v in pairArray.items() if img1 in v]):
                     pairArray[img1] = [img2]
 
-
+                #remembering matched indexes to not repeat itself
                 dictOfIndexes[imgIndex1] = imgIndex2
 
 
@@ -79,7 +74,7 @@ def deleteCloneImages(dictOfCloneImages):
             print(f"removing {delImg} \n")
 
 #path specified will change later
-path = ".//images/"
+path = "C://Users//mathe//Downloads//Images for the website October 9-20211011T180149Z-001//Images for the website October 9//Mowafaq Al-Sayed/"
 
 # images in an regular array
 imgs = loadImages(path)
@@ -90,7 +85,7 @@ npimgs = convImgToNpArrays(imgs)
 cloneListArray = cloneFind(npimgs)
 
 
-print(f"\n        Found these images as copy \n  {cloneListArray}")
+#print(f"\n        Found these images as copy \n  {cloneListArray}")
 
             
 deleteCloneImages(cloneListArray)
