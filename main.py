@@ -73,8 +73,19 @@ def deleteCloneImages(dictOfCloneImages):
             remove(delImg)
             print(f"removing {delImg} \n")
 
-#path specified will change later
-path = "C://Users//mathe//Downloads//Images for the website October 9-20211011T180149Z-001//Images for the website October 9//Mowafaq Al-Sayed/"
+
+
+
+'''INSERT PATH HERE TO FOLDER'''
+
+#-----------------------------------------------------------------------------------------------------------------------------------------
+
+winpath = r"C:\Users\mathe\Downloads\Images for the website October 9-20211011T180149Z-001\Images for the website October 9\Sculptures"
+
+#-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+path = winpath.replace("\\","//")+"/"
 
 # images in an regular array
 imgs = loadImages(path)
