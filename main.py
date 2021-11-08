@@ -84,7 +84,7 @@ def deleteCloneImages(dictOfCloneImages):
 
 #-----------------------------------------------------------------------------------------------------------------------------------------
 
-winpath = r"C:\Users\mathe\Downloads\pictures for the Website 10 11 2021 -20211104T180815Z-001\pictures for the Website 10_ 11_ 2021\Alex Subriney\rest" # <----
+winpath = r"C:\Users\mathe\Downloads\pictures for the Website 10 11 2021 -20211104T180815Z-001\pictures for the Website 10_ 11_ 2021\Arti work for resistant\rest" # <----
 
 #-----------------------------------------------------------------------------------------------------------------------------------------
 
