@@ -3,6 +3,7 @@ from os import listdir, remove
 import numpy as np
 
 
+
 #make a progress bar
 
 def loadImages(path):
@@ -28,11 +29,11 @@ def convImgToNpArrays(array):
     print("Started np converting")
     numpyimg = []
     for i in range(len(array)):
-        numpyimg.append(np.asarray(imgs[i]))
+        numpyimg.append(np.asarray(array[i]))
     print("Np convert end")
     return numpyimg
 
-def cloneFind(npimgs):
+def cloneFind(npimgs, imgs):
     # checking each photo with eachother
 
     dictOfIndexes = {}
@@ -80,27 +81,31 @@ def deleteCloneImages(dictOfCloneImages):
 
 
 
-'''INSERT PATH HERE TO IMG FOLDER'''
+# '''INSERT PATH HERE TO IMG FOLDER'''
 
-#-----------------------------------------------------------------------------------------------------------------------------------------
+# #-----------------------------------------------------------------------------------------------------------------------------------------
 
-winpath = r"C:\Users\mathe\Downloads\pictures for the Website 10 11 2021 -20211104T180815Z-001\pictures for the Website 10_ 11_ 2021\Arti work for resistant\rest" # <----
+# winpath = r"C:\Users\mathe\Downloads\pictures for the Website 10 11 2021 -20211104T180815Z-001\pictures for the Website 10_ 11_ 2021\Arti work for resistant\rest" # <----
 
-#-----------------------------------------------------------------------------------------------------------------------------------------
-
-
-path = winpath.replace("\\","//")+"/"
-
-# images in an regular array
-imgs = loadImages(path)
-
-# change images to an np array
-npimgs = convImgToNpArrays(imgs)
-
-cloneListArray = cloneFind(npimgs)
+# #-----------------------------------------------------------------------------------------------------------------------------------------
 
 
-#print(f"\n        Found these images as copy \n  {cloneListArray}")
+
+
+
+
+# path = winpath.replace("\\","//")+"/"
+
+# # images in an regular array
+# imgs = loadImages(path)
+
+# # change images to an np array
+# npimgs = convImgToNpArrays(imgs)
+
+# cloneListArray = cloneFind(npimgs)
+
+
+# #print(f"\n        Found these images as copy \n  {cloneListArray}")
 
             
-deleteCloneImages(cloneListArray)
+# deleteCloneImages(cloneListArray)
