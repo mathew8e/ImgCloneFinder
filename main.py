@@ -61,6 +61,7 @@ def cloneFind(npimgs, imgs):
 
                 #remembering matched indexes to not repeat itself
                 dictOfIndexes[imgIndex1] = imgIndex2
+    print("Finished Checking...")
 
 
     return pairArray
@@ -70,12 +71,15 @@ def cloneFind(npimgs, imgs):
 
 def deleteCloneImages(dictOfCloneImages):
     #this function will delete all unoriginal photos
-
-
-    for k,v in dictOfCloneImages.items():
-        for delImg in v:
-            remove(delImg)
-            print(f"removing {delImg} \n")
+    if (dictOfCloneImages != {}):
+        print("Started Deleting...")
+        for k,v in dictOfCloneImages.items():
+            for delImg in v:
+                remove(delImg)
+                print(f"removing {delImg} \n")
+    else:
+        print("Nothing to remove")
+                
 
 
 
