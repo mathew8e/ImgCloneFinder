@@ -3,7 +3,6 @@ from os import listdir, remove
 import numpy as np
 
 
-
 #make a progress bar
 
 def loadImages(path):
@@ -85,13 +84,9 @@ def deleteCloneImages(dictOfCloneImages):
 
 # #-----------------------------------------------------------------------------------------------------------------------------------------
 
-# winpath = r"C:\Users\mathe\Downloads\pictures for the Website 10 11 2021 -20211104T180815Z-001\pictures for the Website 10_ 11_ 2021\Arti work for resistant\rest" # <----
+# winpath = r"C:\Users\mathe\Downloads\pictures for the Website 10 11 2021 -20211104T180815Z-001\pictures for the Website 10_ 11_ 2021\Brend alouie\images from a lecture trip at Ningbo University, Ningbo, P.R.China in the Spring 2008" # <----
 
 # #-----------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
 
 
 # path = winpath.replace("\\","//")+"/"
